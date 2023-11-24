@@ -1,0 +1,33 @@
+<p>Componente: Formulario Reactivo</p>
+<!-- Primero, se tiene que importar "ReactiveFormsModule" en el archivo "app.module.ts" -->
+<!-- 2do, se tiene que importar "FormControl" en el archivo "componente.ts" -->
+<form class="container card" [formGroup]="formUser">
+  <h2>Login</h2>
+  <div class="mb-3">
+    <!-- Email -->
+    <label class="form-label">Email:</label>
+    <input type="email" class="form-control" formControlName="email" />
+
+    <div class="alert alert-danger" [hidden]="validaEmail()">
+      Email incorrecto
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <!-- Password -->
+    <label class="form-label">Password: </label>
+    <input type="password" class="form-control" formControlName="password" />
+
+    <div class="alert alert-danger" [hidden]="validaPassword()">
+      Password no válido
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <!-- permite enviar form con el "[disabled]" -->
+    <button class="btn btn-primary" [disabled]="formUser.invalid">
+      Enviar
+    </button>
+  </div>
+</form>
+<!-- <h4>{{ formUser.value | json }}</h4> -->
