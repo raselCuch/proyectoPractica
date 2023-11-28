@@ -1,0 +1,26 @@
+<h1>directiva works!</h1>
+
+<!--!   Ng if -->
+<h3>Ng if</h3>
+
+<!-- <div *ngIf="valido"> -->
+<div *ngIf="validador()">
+  <p>Parrafo</p>
+</div>
+<hr />
+
+<!--!  Ng for -->
+<h3>Ng for</h3>
+<ul>
+  <li *ngFor="let item of listTS">
+    {{ item }}
+  </li>
+</ul>
+
+<ol>
+  <li *ngFor="let personas of personasTS">
+    {{ personas.name }}, {{ personas.lastName }}
+  </li>
+</ol>
+<hr />
+<h3>Ng Template Outlet</h3>
