@@ -1,3 +1,12 @@
 <!-- <app-cambio></app-cambio> -->
 <!-- <app-formulario-reactivo></app-formulario-reactivo> -->
-<app-directiva></app-directiva>
+<!-- <app-directiva></app-directiva> -->
+
+<h2>Comunicación entre componentes</h2>
+<div class="container card bg-success">
+  <h5>Componente padre</h5>
+  <!-- <app-padre></app-padre> -->
+  <label for="">Ingrese texto a enviar: </label>
+  <input type="text" [(ngModel)]="titulo" />
+  <app-hijo titulo="{{ titulo }}" (titleChange)="titulo = $event"></app-hijo>
+</div>

@@ -9,11 +9,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CambioComponent } from './cambio/cambio.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
 import { DirectivaComponent } from './directiva/directiva.component';
+import { PadreComponent } from './padre/padre.component';
+import { HijoComponent } from './hijo/hijo.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, CambioComponent, FormularioReactivoComponent, DirectivaComponent],
+  declarations: [AppComponent, CambioComponent, FormularioReactivoComponent, DirectivaComponent, PadreComponent, HijoComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
